@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debugging Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .box {
+            width: 250px;
+            padding: 20px;
+            border: 2px solid black;
+            background-color: lightblue;
+        }
+    </style>
+
+    <script>
+
+        function calculateTotal() {
+
+            let tickets = 5;
+            let price = 200;
+
+            let total = tickets * price;
+
+            console.log("Tickets:", tickets);
+            console.log("Price:", price);
+            console.log("Total Amount:", total);
+
+            document.getElementById("result").innerHTML =
+            "Total Amount = ₹" + total;
+
+            debugger;
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <h2>Chrome DevTools Debugging Demo</h2>
+
+    <div class="box">
+        Community Event Ticket Calculator
+    </div>
+
+    <br>
+
+    <button onclick="calculateTotal()">
+        Calculate Total
+    </button>
+
+    <p id="result"></p>
+
+</body>
+</html>
